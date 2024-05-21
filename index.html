@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Layout</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #3b5998;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-left input {
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #4b70dd;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar-left, .sidebar-right {
+    width: 20%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.sidebar-right {
+    margin-left: 20px;
+}
+
+main.content {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.post-create {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-create textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.post-create button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.post-create button:hover {
+    background-color: #4b70dd;
+}
+
+.posts .post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius:15px ;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo">Facebook</a>
+            <input type="text" placeholder="Search Facebook">
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Friends</a>
+                <a href="#">Watch</a>
+                <a href="#">Marketplace</a>
+            </nav>
+            <div class="user-info">
+                <img src="https://scontent.fkhi17-1.fna.fbcdn.net/v/t39.30808-1/348625189_3534304860172906_6464343306696301921_n.jpg?stp=dst-jpg_s200x200&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhkx4ZSDVBxxF0j69o6ccTB0AmbUpSmlcHQCZtSlKaV_jJ1B8oJ9QQNz87QnVgNJIrvAUOvQ4Bm3BE4u5U9rVJ&_nc_ohc=KIit8vMWmIQQ7kNvgG-pftN&_nc_ht=scontent.fkhi17-1.fna&oh=00_AYC7c-tsI4Grt3F1wOyXpO2LFoOmlVZ37rRMn1XNYqUNzQ&oe=66526E82" alt="User Avatar">
+                <span>Naeem Ahmed</span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar-left">
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="post-create">
+                <textarea placeholder="What's on your mind?"></textarea>
+                <button>Post</button>
+            </div>
+            <div class="posts">
+                <!-- Posts will go here -->
+                <div class="post">
+                    <div class="post-header">
+                        <video src="https://videos.pexels.com/video-files/3764259/3764259-hd_1280_720_60fps.mp4" height="200px" >
+                            
+                        </video>
+                        <div>
+                            <span>Naeem Ahmed</span>
+                            <span>Just now</span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>This is a sample post.</p>
+                    </div>
+                </div>
+                <!-- Repeat similar blocks for more posts -->
+            </div>
+        </main>
+        <aside class="sidebar-right">
+            <div class="friends">
+                <h3>Contacts</h3>
+                <ul>
+                    <li><a href="#">Friend 1</a></li>
+                    <li><a href="#">Friend 2</a></li>
+                    <li><a href="#">Friend 3</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    
+</body>
+</html>
